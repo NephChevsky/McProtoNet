@@ -1,4 +1,4 @@
-﻿using System.Collections.Frozen;
+using System.Collections.Frozen;
 
 namespace McProtoNet.Protocol;
 
@@ -81,6 +81,8 @@ public static partial class PacketIdHelper
             { (ServerStatusPacket.Ping, 768), 0x01 },
             { (ServerStatusPacket.ServerInfo, 769), 0x00 },
             { (ServerStatusPacket.Ping, 769), 0x01 },
+            { (ServerStatusPacket.ServerInfo, 770), 0x00 },
+            { (ServerStatusPacket.Ping, 770), 0x01 },
         };
 
     private static readonly Dictionary<(PacketIdentifier, int), int> serverboundStatusPackets =
@@ -160,6 +162,8 @@ public static partial class PacketIdHelper
             { (ClientStatusPacket.Ping, 768), 0x01 },
             { (ClientStatusPacket.PingStart, 769), 0x00 },
             { (ClientStatusPacket.Ping, 769), 0x01 },
+            { (ClientStatusPacket.PingStart, 770), 0x00 },
+            { (ClientStatusPacket.Ping, 770), 0x01 },
         };
 
     private static readonly FrozenDictionary<long, int> ClientboundStatusPackets = CombineAll(clientboundStatusPackets);

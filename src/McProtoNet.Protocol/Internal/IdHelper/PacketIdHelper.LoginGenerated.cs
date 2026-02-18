@@ -1,4 +1,4 @@
-﻿using System.Collections.Frozen;
+using System.Collections.Frozen;
 
 namespace McProtoNet.Protocol;
 
@@ -194,6 +194,12 @@ public static partial class PacketIdHelper
             { (ServerLoginPacket.Compress, 769), 0x03 },
             { (ServerLoginPacket.LoginPluginRequest, 769), 0x04 },
             { (ServerLoginPacket.CookieRequest, 769), 0x05 },
+            { (ServerLoginPacket.Disconnect, 770), 0x00 },
+            { (ServerLoginPacket.EncryptionBegin, 770), 0x01 },
+            { (ServerLoginPacket.Success, 770), 0x02 },
+            { (ServerLoginPacket.Compress, 770), 0x03 },
+            { (ServerLoginPacket.LoginPluginRequest, 770), 0x04 },
+            { (ServerLoginPacket.CookieRequest, 770), 0x05 },
         };
 
     private static readonly Dictionary<(PacketIdentifier, int), int> serverboundLoginPackets =
@@ -318,6 +324,11 @@ public static partial class PacketIdHelper
             { (ClientLoginPacket.LoginPluginResponse, 769), 0x02 },
             { (ClientLoginPacket.LoginAcknowledged, 769), 0x03 },
             { (ClientLoginPacket.CookieResponse, 769), 0x04 },
+            { (ClientLoginPacket.LoginStart, 770), 0x00 },
+            { (ClientLoginPacket.EncryptionBegin, 770), 0x01 },
+            { (ClientLoginPacket.LoginPluginResponse, 770), 0x02 },
+            { (ClientLoginPacket.LoginAcknowledged, 770), 0x03 },
+            { (ClientLoginPacket.CookieResponse, 770), 0x04 },
         };
 
     private static readonly FrozenDictionary<long, int> ClientboundLoginPackets = CombineAll(clientboundLoginPackets);

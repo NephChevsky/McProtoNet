@@ -1,4 +1,4 @@
-﻿using System.Collections.Frozen;
+using System.Collections.Frozen;
 
 namespace McProtoNet.Protocol;
 
@@ -92,6 +92,23 @@ public static partial class PacketIdHelper
             { (ServerConfigurationPacket.SelectKnownPacks, 769), 0x0e },
             { (ServerConfigurationPacket.CustomReportDetails, 769), 0x0f },
             { (ServerConfigurationPacket.ServerLinks, 769), 0x10 },
+            { (ServerConfigurationPacket.CookieRequest, 770), 0x00 },
+            { (ServerConfigurationPacket.CustomPayload, 770), 0x01 },
+            { (ServerConfigurationPacket.Disconnect, 770), 0x02 },
+            { (ServerConfigurationPacket.FinishConfiguration, 770), 0x03 },
+            { (ServerConfigurationPacket.KeepAlive, 770), 0x04 },
+            { (ServerConfigurationPacket.Ping, 770), 0x05 },
+            { (ServerConfigurationPacket.ResetChat, 770), 0x06 },
+            { (ServerConfigurationPacket.RegistryData, 770), 0x07 },
+            { (ServerConfigurationPacket.RemoveResourcePack, 770), 0x08 },
+            { (ServerConfigurationPacket.AddResourcePack, 770), 0x09 },
+            { (ServerConfigurationPacket.StoreCookie, 770), 0x0a },
+            { (ServerConfigurationPacket.Transfer, 770), 0x0b },
+            { (ServerConfigurationPacket.FeatureFlags, 770), 0x0c },
+            { (ServerConfigurationPacket.Tags, 770), 0x0d },
+            { (ServerConfigurationPacket.SelectKnownPacks, 770), 0x0e },
+            { (ServerConfigurationPacket.CustomReportDetails, 770), 0x0f },
+            { (ServerConfigurationPacket.ServerLinks, 770), 0x10 },
         };
 
     private static readonly Dictionary<(PacketIdentifier, int), int> serverboundConfigurationPackets =
@@ -147,6 +164,16 @@ public static partial class PacketIdHelper
             { (ClientConfigurationPacket.SelectKnownPacks, 769), 0x07 },
             { (ClientConfigurationPacket.CustomReportDetails, 769), 0x08 },
             { (ClientConfigurationPacket.ServerLinks, 769), 0x09 },
+            { (ClientConfigurationPacket.Settings, 770), 0x00 },
+            { (ClientConfigurationPacket.CookieResponse, 770), 0x01 },
+            { (ClientConfigurationPacket.CustomPayload, 770), 0x02 },
+            { (ClientConfigurationPacket.FinishConfiguration, 770), 0x03 },
+            { (ClientConfigurationPacket.KeepAlive, 770), 0x04 },
+            { (ClientConfigurationPacket.Pong, 770), 0x05 },
+            { (ClientConfigurationPacket.ResourcePackReceive, 770), 0x06 },
+            { (ClientConfigurationPacket.SelectKnownPacks, 770), 0x07 },
+            { (ClientConfigurationPacket.CustomReportDetails, 770), 0x08 },
+            { (ClientConfigurationPacket.ServerLinks, 770), 0x09 },
         };
 
     private static readonly FrozenDictionary<long, int> ClientboundConfigurationPackets =
