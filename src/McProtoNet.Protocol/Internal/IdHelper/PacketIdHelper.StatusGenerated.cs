@@ -83,6 +83,8 @@ public static partial class PacketIdHelper
             { (ServerStatusPacket.Ping, 769), 0x01 },
             { (ServerStatusPacket.ServerInfo, 770), 0x00 },
             { (ServerStatusPacket.Ping, 770), 0x01 },
+            { (ServerStatusPacket.ServerInfo, 771), 0x00 },
+            { (ServerStatusPacket.Ping, 771), 0x01 },
         };
 
     private static readonly Dictionary<(PacketIdentifier, int), int> serverboundStatusPackets =
@@ -164,6 +166,8 @@ public static partial class PacketIdHelper
             { (ClientStatusPacket.Ping, 769), 0x01 },
             { (ClientStatusPacket.PingStart, 770), 0x00 },
             { (ClientStatusPacket.Ping, 770), 0x01 },
+            { (ClientStatusPacket.PingStart, 771), 0x00 },
+            { (ClientStatusPacket.Ping, 771), 0x01 },
         };
 
     private static readonly FrozenDictionary<long, int> ClientboundStatusPackets = CombineAll(clientboundStatusPackets);

@@ -109,6 +109,25 @@ public static partial class PacketIdHelper
             { (ServerConfigurationPacket.SelectKnownPacks, 770), 0x0e },
             { (ServerConfigurationPacket.CustomReportDetails, 770), 0x0f },
             { (ServerConfigurationPacket.ServerLinks, 770), 0x10 },
+            { (ServerConfigurationPacket.CookieRequest, 771), 0x00 },
+            { (ServerConfigurationPacket.CustomPayload, 771), 0x01 },
+            { (ServerConfigurationPacket.Disconnect, 771), 0x02 },
+            { (ServerConfigurationPacket.FinishConfiguration, 771), 0x03 },
+            { (ServerConfigurationPacket.KeepAlive, 771), 0x04 },
+            { (ServerConfigurationPacket.Ping, 771), 0x05 },
+            { (ServerConfigurationPacket.ResetChat, 771), 0x06 },
+            { (ServerConfigurationPacket.RegistryData, 771), 0x07 },
+            { (ServerConfigurationPacket.RemoveResourcePack, 771), 0x08 },
+            { (ServerConfigurationPacket.AddResourcePack, 771), 0x09 },
+            { (ServerConfigurationPacket.StoreCookie, 771), 0x0a },
+            { (ServerConfigurationPacket.Transfer, 771), 0x0b },
+            { (ServerConfigurationPacket.FeatureFlags, 771), 0x0c },
+            { (ServerConfigurationPacket.Tags, 771), 0x0d },
+            { (ServerConfigurationPacket.SelectKnownPacks, 771), 0x0e },
+            { (ServerConfigurationPacket.CustomReportDetails, 771), 0x0f },
+            { (ServerConfigurationPacket.ServerLinks, 771), 0x10 },
+            { (ServerConfigurationPacket.ClearDialog, 771), 0x11 },
+            { (ServerConfigurationPacket.ShowDialog, 771), 0x12 },
         };
 
     private static readonly Dictionary<(PacketIdentifier, int), int> serverboundConfigurationPackets =
@@ -174,6 +193,15 @@ public static partial class PacketIdHelper
             { (ClientConfigurationPacket.SelectKnownPacks, 770), 0x07 },
             { (ClientConfigurationPacket.CustomReportDetails, 770), 0x08 },
             { (ClientConfigurationPacket.ServerLinks, 770), 0x09 },
+            { (ClientConfigurationPacket.Settings, 771), 0x00 },
+            { (ClientConfigurationPacket.CookieResponse, 771), 0x01 },
+            { (ClientConfigurationPacket.CustomPayload, 771), 0x02 },
+            { (ClientConfigurationPacket.FinishConfiguration, 771), 0x03 },
+            { (ClientConfigurationPacket.KeepAlive, 771), 0x04 },
+            { (ClientConfigurationPacket.Pong, 771), 0x05 },
+            { (ClientConfigurationPacket.ResourcePackReceive, 771), 0x06 },
+            { (ClientConfigurationPacket.SelectKnownPacks, 771), 0x07 },
+            { (ClientConfigurationPacket.CustomClickAction, 771), 0x08 },
         };
 
     private static readonly FrozenDictionary<long, int> ClientboundConfigurationPackets =
