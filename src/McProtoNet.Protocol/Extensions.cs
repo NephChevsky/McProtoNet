@@ -103,6 +103,16 @@ public static class Extensions
             portalCooldown, seaLevel);
     }
 
+    public static ChunkHeightMap ReadChunkHeightMap(this ref MinecraftPrimitiveReader reader, int protocolVersion)
+    {
+        if (protocolVersion is < 765 or > 774)
+            throw new InvalidOperationException($"Protocol {protocolVersion} not supported.");
+        
+        int type = reader.ReadVarInt();
+        long[] data = reader.ReadArrayInt64BigEndian(reader.ReadVarInt());
+
+        return new ChunkHeightMap(type, data);
+    }
 
     public static ChunkBlockEntity ReadChunkBlockEntity(this ref MinecraftPrimitiveReader reader, int protocolVersion)
 

@@ -1,4 +1,5 @@
 ﻿using McProtoNet.NBT;
+using McProtoNet.Protocol.Types;
 using McProtoNet.Serialization;
 
 namespace McProtoNet.Protocol.Packets.Play.Clientbound;
@@ -203,8 +204,8 @@ public abstract partial class MapChunkPacket : IServerPacket
     }
     //public class V765 Ignore 
 
-    [PacketSubInfo(763, 774)]
-    public sealed partial class V763_774 : MapChunkPacket
+    [PacketSubInfo(763, 769)]
+    public sealed partial class V763_769 : MapChunkPacket
     {
         public NbtTag Heightmaps { get; set; }
         public ChunkBlockEntity[] BlockEntities { get; set; }
@@ -224,6 +225,72 @@ public abstract partial class MapChunkPacket : IServerPacket
 
             Heightmaps = reader.ReadNbtTag(protocolVersion);
 
+            ChunkData = reader.ReadBuffer(LengthFormat.Byte);
+
+            BlockEntities = reader.ReadArray(LengthFormat.VarInt, (ref MinecraftPrimitiveReader r1) => r1.ReadChunkBlockEntity(protocolVersion));
+
+            try
+            {
+                SkyLightMask = reader.ReadArrayInt64BigEndian(reader.ReadVarInt());
+                BlockLightMask = reader.ReadArrayInt64BigEndian(reader.ReadVarInt());
+                EmptySkyLightMask = reader.ReadArrayInt64BigEndian(reader.ReadVarInt());
+                EmptyBlockLightMask = reader.ReadArrayInt64BigEndian(reader.ReadVarInt());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            SkyLight = reader.ReadArray(LengthFormat.VarInt, (ref MinecraftPrimitiveReader primitiveReader) =>
+                primitiveReader.ReadBuffer(LengthFormat.VarInt)
+            );
+            BlockLight = reader.ReadArray(LengthFormat.VarInt, (ref MinecraftPrimitiveReader primitiveReader) =>
+                primitiveReader.ReadBuffer(LengthFormat.VarInt)
+            );
+        }
+    }
+
+    [PacketSubInfo(770, 770)]
+    public sealed partial class V770 : MapChunkPacket
+    {
+        public NbtTag Heightmaps { get; set; }
+        public ChunkBlockEntity[] BlockEntities { get; set; }
+
+        public long[] SkyLightMask { get; set; }
+        public long[] BlockLightMask { get; set; }
+        public long[] EmptySkyLightMask { get; set; }
+        public long[] EmptyBlockLightMask { get; set; }
+
+        public byte[][] SkyLight { get; set; }
+        public byte[][] BlockLight { get; set; }
+
+        public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    [PacketSubInfo(771, 774)]
+    public sealed partial class V771_774 : MapChunkPacket
+    {
+        public ChunkHeightMap[] Heightmaps { get; set; }
+        public ChunkBlockEntity[] BlockEntities { get; set; }
+
+        public long[] SkyLightMask { get; set; }
+        public long[] BlockLightMask { get; set; }
+        public long[] EmptySkyLightMask { get; set; }
+        public long[] EmptyBlockLightMask { get; set; }
+
+        public byte[][] SkyLight { get; set; }
+        public byte[][] BlockLight { get; set; }
+
+        public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
+        {
+            X = reader.ReadSignedInt();
+            Z = reader.ReadSignedInt();
+
+            Heightmaps = reader.ReadArray(LengthFormat.VarInt, (ref MinecraftPrimitiveReader r1) => r1.ReadChunkHeightMap(protocolVersion));
 
             ChunkData = reader.ReadBuffer(LengthFormat.VarInt);
 
