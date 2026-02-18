@@ -91,6 +91,8 @@ public static partial class PacketIdHelper
             { (ClientHandshakingPacket.LegacyServerListPing, 771), 0xfe },
             { (ClientHandshakingPacket.SetProtocol, 772), 0x00 },
             { (ClientHandshakingPacket.LegacyServerListPing, 772), 0xfe },
+            { (ClientHandshakingPacket.SetProtocol, 773), 0x00 },
+            { (ClientHandshakingPacket.LegacyServerListPing, 773), 0xfe },
         };
 
     private static readonly FrozenDictionary<long, int> ServerboundHandshakingPackets =

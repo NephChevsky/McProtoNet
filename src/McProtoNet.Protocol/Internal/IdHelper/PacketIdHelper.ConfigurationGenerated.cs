@@ -147,6 +147,26 @@ public static partial class PacketIdHelper
             { (ServerConfigurationPacket.ServerLinks, 772), 0x10 },
             { (ServerConfigurationPacket.ClearDialog, 772), 0x11 },
             { (ServerConfigurationPacket.ShowDialog, 772), 0x12 },
+            { (ServerConfigurationPacket.CookieRequest, 773), 0x00 },
+            { (ServerConfigurationPacket.CustomPayload, 773), 0x01 },
+            { (ServerConfigurationPacket.Disconnect, 773), 0x02 },
+            { (ServerConfigurationPacket.FinishConfiguration, 773), 0x03 },
+            { (ServerConfigurationPacket.KeepAlive, 773), 0x04 },
+            { (ServerConfigurationPacket.Ping, 773), 0x05 },
+            { (ServerConfigurationPacket.ResetChat, 773), 0x06 },
+            { (ServerConfigurationPacket.RegistryData, 773), 0x07 },
+            { (ServerConfigurationPacket.RemoveResourcePack, 773), 0x08 },
+            { (ServerConfigurationPacket.AddResourcePack, 773), 0x09 },
+            { (ServerConfigurationPacket.StoreCookie, 773), 0x0a },
+            { (ServerConfigurationPacket.Transfer, 773), 0x0b },
+            { (ServerConfigurationPacket.FeatureFlags, 773), 0x0c },
+            { (ServerConfigurationPacket.Tags, 773), 0x0d },
+            { (ServerConfigurationPacket.SelectKnownPacks, 773), 0x0e },
+            { (ServerConfigurationPacket.CustomReportDetails, 773), 0x0f },
+            { (ServerConfigurationPacket.ServerLinks, 773), 0x10 },
+            { (ServerConfigurationPacket.ClearDialog, 773), 0x11 },
+            { (ServerConfigurationPacket.ShowDialog, 773), 0x12 },
+            { (ServerConfigurationPacket.CodeOfConduct, 773), 0x13 },
         };
 
     private static readonly Dictionary<(PacketIdentifier, int), int> serverboundConfigurationPackets =
@@ -230,6 +250,16 @@ public static partial class PacketIdHelper
             { (ClientConfigurationPacket.ResourcePackReceive, 772), 0x06 },
             { (ClientConfigurationPacket.SelectKnownPacks, 772), 0x07 },
             { (ClientConfigurationPacket.CustomClickAction, 772), 0x08 },
+            { (ClientConfigurationPacket.Settings, 773), 0x00 },
+            { (ClientConfigurationPacket.CookieResponse, 773), 0x01 },
+            { (ClientConfigurationPacket.CustomPayload, 773), 0x02 },
+            { (ClientConfigurationPacket.FinishConfiguration, 773), 0x03 },
+            { (ClientConfigurationPacket.KeepAlive, 773), 0x04 },
+            { (ClientConfigurationPacket.Pong, 773), 0x05 },
+            { (ClientConfigurationPacket.ResourcePackReceive, 773), 0x06 },
+            { (ClientConfigurationPacket.SelectKnownPacks, 773), 0x07 },
+            { (ClientConfigurationPacket.CustomClickAction, 773), 0x08 },
+            { (ClientConfigurationPacket.AcceptCodeOfConduct, 773), 0x09 },
         };
 
     private static readonly FrozenDictionary<long, int> ClientboundConfigurationPackets =
