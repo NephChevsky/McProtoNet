@@ -2,6 +2,7 @@ using McProtoNet.Protocol;
 using McProtoNet.NBT;
 using McProtoNet.Serialization;
 using System;
+using McProtoNet.Protocol.Types;
 
 namespace McProtoNet.Protocol.Packets.Play.Clientbound
 {
@@ -64,8 +65,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public int Type { get; set; }
         }
 
-        [PacketSubInfo(759, 774)]
-        public sealed partial class V759_774 : SpawnEntityPacket
+        [PacketSubInfo(759, 772)]
+        public sealed partial class V759_772 : SpawnEntityPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {
@@ -84,6 +85,29 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
                 VelocityZ = reader.ReadSignedShort();
             }
 
+            public int Type { get; set; }
+            public sbyte HeadPitch { get; set; }
+        }
+
+        [PacketSubInfo(773, 774)]
+        public sealed partial class V774_774 : SpawnEntityPacket
+        {
+            public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
+            {
+                EntityId = reader.ReadVarInt();
+                ObjectUUID = reader.ReadUUID();
+                Type = reader.ReadVarInt();
+                X = reader.ReadDouble();
+                Y = reader.ReadDouble();
+                Z = reader.ReadDouble();
+                Velocity = reader.ReadLpVec3(protocolVersion);
+                Pitch = reader.ReadSignedByte();
+                Yaw = reader.ReadSignedByte();
+                HeadPitch = reader.ReadSignedByte();
+                ObjectData = reader.ReadVarInt();
+            }
+
+            public LpVec3 Velocity { get; set; }
             public int Type { get; set; }
             public sbyte HeadPitch { get; set; }
         }

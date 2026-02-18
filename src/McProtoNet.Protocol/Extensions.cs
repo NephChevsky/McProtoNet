@@ -1,4 +1,5 @@
 ﻿using McProtoNet.NBT;
+using McProtoNet.Protocol.Types;
 using McProtoNet.Serialization;
 
 namespace McProtoNet.Protocol;
@@ -143,6 +144,49 @@ public static class Extensions
         }
 
         throw new InvalidOperationException("Protocol version not supported");
+    }
+
+    public static LpVec3 ReadLpVec3(this ref MinecraftPrimitiveReader reader, int protocolVersion)
+    {
+        if (protocolVersion is >= 773 and <= 774)
+        {
+            byte header = reader.ReadUnsignedByte();
+            if (header == 0) return new LpVec3(0, 0, 0);
+
+            // Read the next 5 bytes to complete the 48-bit (6 byte) pack
+            byte b = reader.ReadUnsignedByte();
+            uint c = unchecked((uint)reader.ReadSignedInt());
+
+            // Combine into a 48-bit long
+            long packed = ((long)c << 16) | ((long)b << 8) | header;
+
+            // Dynamic Scale Calculation
+            int scale = header & 3;
+            if ((header & 4) == 4)
+            {
+                int varIntVal = reader.ReadVarInt();
+                scale = (varIntVal * 4) + scale;
+            }
+
+            // Unpack bits (Logic matching the JS 'unpack' helper)
+            double x = Unpack(packed, 3) * scale;
+            double y = Unpack(packed, 18) * scale;
+            double z = Unpack(packed, 33) * scale;
+
+            return new LpVec3(x, y, z);
+        }
+        else
+        {
+            throw new InvalidOperationException("Protocol version not supported");
+        }
+    }
+
+    private static long Unpack(long packed, int startBit)
+    {
+        // Extract 15 bits and handle sign extension if necessary
+        long val = (packed >> startBit) & 0x7FFF;
+        if (val >= 0x4000) val -= 0x8000; // Manual sign handling for 15-bit
+        return val;
     }
 
     public static void WritePosition(this scoped ref MinecraftPrimitiveWriter writer, Position position,
