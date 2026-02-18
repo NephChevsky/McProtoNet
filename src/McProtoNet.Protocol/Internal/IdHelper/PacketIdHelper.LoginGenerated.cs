@@ -206,6 +206,12 @@ public static partial class PacketIdHelper
             { (ServerLoginPacket.Compress, 771), 0x03 },
             { (ServerLoginPacket.LoginPluginRequest, 771), 0x04 },
             { (ServerLoginPacket.CookieRequest, 771), 0x05 },
+            { (ServerLoginPacket.Disconnect, 772), 0x00 },
+            { (ServerLoginPacket.EncryptionBegin, 772), 0x01 },
+            { (ServerLoginPacket.Success, 772), 0x02 },
+            { (ServerLoginPacket.Compress, 772), 0x03 },
+            { (ServerLoginPacket.LoginPluginRequest, 772), 0x04 },
+            { (ServerLoginPacket.CookieRequest, 772), 0x05 },
         };
 
     private static readonly Dictionary<(PacketIdentifier, int), int> serverboundLoginPackets =
@@ -340,6 +346,11 @@ public static partial class PacketIdHelper
             { (ClientLoginPacket.LoginPluginResponse, 771), 0x02 },
             { (ClientLoginPacket.LoginAcknowledged, 771), 0x03 },
             { (ClientLoginPacket.CookieResponse, 771), 0x04 },
+            { (ClientLoginPacket.LoginStart, 772), 0x00 },
+            { (ClientLoginPacket.EncryptionBegin, 772), 0x01 },
+            { (ClientLoginPacket.LoginPluginResponse, 772), 0x02 },
+            { (ClientLoginPacket.LoginAcknowledged, 772), 0x03 },
+            { (ClientLoginPacket.CookieResponse, 772), 0x04 },
         };
 
     private static readonly FrozenDictionary<long, int> ClientboundLoginPackets = CombineAll(clientboundLoginPackets);
