@@ -13,8 +13,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public byte Byte2 { get; set; }
         public int BlockId { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : BlockActionPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : BlockActionPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

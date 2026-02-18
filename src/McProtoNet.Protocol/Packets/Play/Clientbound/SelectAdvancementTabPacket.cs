@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public string? Id { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : SelectAdvancementTabPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : SelectAdvancementTabPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

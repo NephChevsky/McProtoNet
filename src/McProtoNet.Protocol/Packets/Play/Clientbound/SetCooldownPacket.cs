@@ -22,8 +22,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public int ItemID { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : SetCooldownPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : SetCooldownPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

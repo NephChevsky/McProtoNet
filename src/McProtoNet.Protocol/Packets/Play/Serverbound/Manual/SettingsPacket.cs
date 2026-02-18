@@ -81,8 +81,8 @@ public partial class SettingsPacket : IClientPacket
         }
     }
 
-    [PacketSubInfo(768, 769)]
-    public sealed partial class V768_769 : SettingsPacket
+    [PacketSubInfo(768, 774)]
+    public sealed partial class V768_774 : SettingsPacket
     {
         public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
@@ -113,8 +113,8 @@ public partial class SettingsPacket : IClientPacket
             V755_756.SerializeInternal(ref writer, protocolVersion, Locale, ViewDistance, ChatFlags, ChatColors, SkinParts, MainHand, DisableTextFiltering);
         else if (V757_767.IsSupportedVersionStatic(protocolVersion))
             V757_767.SerializeInternal(ref writer, protocolVersion, Locale, ViewDistance, ChatFlags, ChatColors, SkinParts, MainHand, EnableTextFiltering, EnableServerListing);
-        else if (V768_769.IsSupportedVersionStatic(protocolVersion))
-            V768_769.SerializeInternal(ref writer, protocolVersion, Locale, ViewDistance, ChatFlags, ChatColors, SkinParts, MainHand, EnableTextFiltering, EnableServerListing, ParticleStatus);
+        else if (V768_774.IsSupportedVersionStatic(protocolVersion))
+            V768_774.SerializeInternal(ref writer, protocolVersion, Locale, ViewDistance, ChatFlags, ChatColors, SkinParts, MainHand, EnableTextFiltering, EnableServerListing, ParticleStatus);
         else
             throw new ProtocolNotSupportException(nameof(ClientPlayPacket.Settings), protocolVersion);
     }

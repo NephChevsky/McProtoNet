@@ -24,8 +24,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             }
         }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : ResourcePackReceivePacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : ResourcePackReceivePacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -46,8 +46,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_764.IsSupportedVersionStatic(protocolVersion))
                 V340_764.SerializeInternal(ref writer, protocolVersion, Result);
-            else if (V765_769.IsSupportedVersionStatic(protocolVersion))
-                V765_769.SerializeInternal(ref writer, protocolVersion, default, Result);
+            else if (V765_774.IsSupportedVersionStatic(protocolVersion))
+                V765_774.SerializeInternal(ref writer, protocolVersion, default, Result);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.ResourcePackReceive), protocolVersion);
         }

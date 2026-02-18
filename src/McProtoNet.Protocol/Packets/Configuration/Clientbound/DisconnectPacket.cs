@@ -19,8 +19,8 @@ public abstract partial class DisconnectPacket : IServerPacket
         }
     }
 
-    [PacketSubInfo(765, 769)]
-    public sealed partial class V765_769 : DisconnectPacket
+    [PacketSubInfo(765, 774)]
+    public sealed partial class V765_774 : DisconnectPacket
     {
         public NbtTag Reason { get; set; }
 

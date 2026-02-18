@@ -38,8 +38,8 @@ public partial class SettingsPacket : IClientPacket
         }
     }
 
-    [PacketSubInfo(768, 769)]
-    public sealed partial class V768_769 : SettingsPacket
+    [PacketSubInfo(768, 774)]
+    public sealed partial class V768_774 : SettingsPacket
     {
         public int Particles { get; set; }
 
@@ -71,8 +71,8 @@ public partial class SettingsPacket : IClientPacket
         if (V764_767.IsSupportedVersionStatic(protocolVersion))
             V764_767.SerializeInternal(ref writer, protocolVersion, Locale, ViewDistance, ChatFlags, ChatColors,
                 SkinParts, MainHand, EnableTextFiltering, EnableServerListing);
-        else if (V768_769.IsSupportedVersionStatic(protocolVersion))
-            V768_769.SerializeInternal(ref writer, protocolVersion, Locale, ViewDistance, ChatFlags, ChatColors,
+        else if (V768_774.IsSupportedVersionStatic(protocolVersion))
+            V768_774.SerializeInternal(ref writer, protocolVersion, Locale, ViewDistance, ChatFlags, ChatColors,
                 SkinParts, MainHand, EnableTextFiltering, EnableServerListing, 0);
         else
             throw new ProtocolNotSupportException(nameof(ClientConfigurationPacket.Settings), protocolVersion);

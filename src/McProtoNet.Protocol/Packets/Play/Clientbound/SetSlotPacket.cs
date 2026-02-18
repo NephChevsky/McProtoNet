@@ -54,8 +54,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public int StateId { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : SetSlotPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : SetSlotPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

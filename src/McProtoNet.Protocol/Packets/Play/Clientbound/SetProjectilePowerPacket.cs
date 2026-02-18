@@ -22,8 +22,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public Vector3F64 Power { get; set; }
         }
 
-        [PacketSubInfo(767, 769)]
-        public sealed partial class V767_769 : SetProjectilePowerPacket
+        [PacketSubInfo(767, 774)]
+        public sealed partial class V767_774 : SetProjectilePowerPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

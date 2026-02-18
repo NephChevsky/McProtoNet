@@ -5,8 +5,8 @@ namespace McProtoNet.Protocol.Packets.Configuration.Clientbound;
 [PacketInfo("FinishConfiguration", PacketState.Configuration, PacketDirection.Clientbound)]
 public abstract partial class FinishConfigurationPacket : IServerPacket
 {
-    [PacketSubInfo(764, 769)]
-    public sealed partial class V764_769 : FinishConfigurationPacket
+    [PacketSubInfo(764, 774)]
+    public sealed partial class V764_774 : FinishConfigurationPacket
     {
         public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
         {

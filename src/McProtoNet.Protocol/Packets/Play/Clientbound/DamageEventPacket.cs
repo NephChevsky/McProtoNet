@@ -14,8 +14,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int SourceDirectId { get; set; }
         public Vector3F64? SourcePosition { get; set; }
 
-        [PacketSubInfo(762, 769)]
-        public sealed partial class V762_769 : DamageEventPacket
+        [PacketSubInfo(762, 774)]
+        public sealed partial class V762_774 : DamageEventPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

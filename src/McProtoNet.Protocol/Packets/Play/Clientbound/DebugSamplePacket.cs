@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public long[] Sample { get; set; }
         public int Type { get; set; }
 
-        [PacketSubInfo(766, 769)]
-        public sealed partial class V766_769 : DebugSamplePacket
+        [PacketSubInfo(766, 774)]
+        public sealed partial class V766_774 : DebugSamplePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

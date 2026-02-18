@@ -37,8 +37,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public int Action { get; set; }
         }
 
-        [PacketSubInfo(764, 769)]
-        public sealed partial class V764_769 : TileEntityDataPacket
+        [PacketSubInfo(764, 774)]
+        public sealed partial class V764_774 : TileEntityDataPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

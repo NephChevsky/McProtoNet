@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int ChunkX { get; set; }
         public int ChunkZ { get; set; }
 
-        [PacketSubInfo(477, 769)]
-        public sealed partial class V477_769 : UpdateViewPositionPacket
+        [PacketSubInfo(477, 774)]
+        public sealed partial class V477_774 : UpdateViewPositionPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

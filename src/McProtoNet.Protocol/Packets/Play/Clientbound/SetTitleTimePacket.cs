@@ -12,8 +12,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int Stay { get; set; }
         public int FadeOut { get; set; }
 
-        [PacketSubInfo(755, 769)]
-        public sealed partial class V755_769 : SetTitleTimePacket
+        [PacketSubInfo(755, 774)]
+        public sealed partial class V755_774 : SetTitleTimePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

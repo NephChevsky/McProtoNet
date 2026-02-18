@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public Guid[] Players { get; set; }
 
-        [PacketSubInfo(761, 769)]
-        public sealed partial class V761_769 : PlayerRemovePacket
+        [PacketSubInfo(761, 774)]
+        public sealed partial class V761_774 : PlayerRemovePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

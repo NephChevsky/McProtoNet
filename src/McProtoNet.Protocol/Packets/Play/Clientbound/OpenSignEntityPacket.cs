@@ -19,8 +19,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(763, 769)]
-        public sealed partial class V763_769 : OpenSignEntityPacket
+        [PacketSubInfo(763, 774)]
+        public sealed partial class V763_774 : OpenSignEntityPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

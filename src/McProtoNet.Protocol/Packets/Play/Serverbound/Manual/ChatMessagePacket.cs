@@ -88,8 +88,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         }
 
 
-        [PacketSubInfo(761, 769)]
-        public sealed partial class V761_769 : ChatMessagePacket
+        [PacketSubInfo(761, 774)]
+        public sealed partial class V761_774 : ChatMessagePacket
         {
             public byte[]? Signature { get; set; }
             public int Offset { get; set; }
@@ -143,9 +143,9 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
                 V759.SerializeInternal(ref writer, protocolVersion, Message, Timestamp, Salt, [], false);
             else if (V760.IsSupportedVersionStatic(protocolVersion))
                 V760.SerializeInternal(ref writer, protocolVersion, Message, Timestamp, Salt, [], false, [], null);
-            else if (V761_769.IsSupportedVersionStatic(protocolVersion))
+            else if (V761_774.IsSupportedVersionStatic(protocolVersion))
 
-                V761_769.SerializeInternal(ref writer, protocolVersion, Message, Timestamp, Salt, null, 0,
+                V761_774.SerializeInternal(ref writer, protocolVersion, Message, Timestamp, Salt, null, 0,
                     [0, 0, 0]);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.ChatMessage), protocolVersion);

@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int EntityId { get; set; }
         public int VehicleId { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : AttachEntityPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : AttachEntityPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

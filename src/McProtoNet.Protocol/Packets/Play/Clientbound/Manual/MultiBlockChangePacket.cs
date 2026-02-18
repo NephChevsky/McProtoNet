@@ -106,8 +106,8 @@ public abstract partial class MultiBlockChangePacket : IServerPacket
     }
 
 
-    [PacketSubInfo(763, 769)]
-    public sealed partial class V763_769 : MultiBlockChangePacket
+    [PacketSubInfo(763, 774)]
+    public sealed partial class V763_774 : MultiBlockChangePacket
     {
         public ChunkCoordinate ChunkCoordinates { get; set; }
         public int[] Records { get; set; }

@@ -13,8 +13,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int Data { get; set; }
         public bool Global { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : WorldEventPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : WorldEventPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

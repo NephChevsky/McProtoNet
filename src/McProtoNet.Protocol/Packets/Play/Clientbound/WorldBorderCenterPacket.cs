@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public double X { get; set; }
         public double Z { get; set; }
 
-        [PacketSubInfo(755, 769)]
-        public sealed partial class V755_769 : WorldBorderCenterPacket
+        [PacketSubInfo(755, 774)]
+        public sealed partial class V755_774 : WorldBorderCenterPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

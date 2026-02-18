@@ -21,8 +21,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : UpdateTimePacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : UpdateTimePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

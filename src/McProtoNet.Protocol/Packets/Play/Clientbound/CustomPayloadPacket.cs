@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public string Channel { get; set; }
         public byte[] Data { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : CustomPayloadPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : CustomPayloadPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

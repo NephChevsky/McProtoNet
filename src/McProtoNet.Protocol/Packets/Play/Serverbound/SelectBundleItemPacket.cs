@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         public int SlotId { get; set; }
         public int SelectedItemIndex { get; set; }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : SelectBundleItemPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : SelectBundleItemPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -29,8 +29,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V768_769.IsSupportedVersionStatic(protocolVersion))
-                V768_769.SerializeInternal(ref writer, protocolVersion, SlotId, SelectedItemIndex);
+            if (V768_774.IsSupportedVersionStatic(protocolVersion))
+                V768_774.SerializeInternal(ref writer, protocolVersion, SlotId, SelectedItemIndex);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.SelectBundleItem), protocolVersion);
         }

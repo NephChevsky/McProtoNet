@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public Position Location { get; set; }
         public int Type { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        public sealed partial class V340_769 : BlockChangePacket
+        [PacketSubInfo(340, 774)]
+        public sealed partial class V340_774 : BlockChangePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

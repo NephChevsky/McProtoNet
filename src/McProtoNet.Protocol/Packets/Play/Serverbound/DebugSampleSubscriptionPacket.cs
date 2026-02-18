@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
     {
         public int Type { get; set; }
 
-        [PacketSubInfo(766, 769)]
-        public sealed partial class V766_769 : DebugSampleSubscriptionPacket
+        [PacketSubInfo(766, 774)]
+        public sealed partial class V766_774 : DebugSampleSubscriptionPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -26,8 +26,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V766_769.IsSupportedVersionStatic(protocolVersion))
-                V766_769.SerializeInternal(ref writer, protocolVersion, Type);
+            if (V766_774.IsSupportedVersionStatic(protocolVersion))
+                V766_774.SerializeInternal(ref writer, protocolVersion, Type);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.DebugSampleSubscription),
                     protocolVersion);

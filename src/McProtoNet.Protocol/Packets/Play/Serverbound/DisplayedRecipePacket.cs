@@ -25,8 +25,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public string RecipeId { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : DisplayedRecipePacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : DisplayedRecipePacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -46,8 +46,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V751_767.IsSupportedVersionStatic(protocolVersion))
                 V751_767.SerializeInternal(ref writer, protocolVersion, string.Empty);
-            else if (V768_769.IsSupportedVersionStatic(protocolVersion))
-                V768_769.SerializeInternal(ref writer, protocolVersion, 0);
+            else if (V768_774.IsSupportedVersionStatic(protocolVersion))
+                V768_774.SerializeInternal(ref writer, protocolVersion, 0);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.DisplayedRecipe), protocolVersion);
         }

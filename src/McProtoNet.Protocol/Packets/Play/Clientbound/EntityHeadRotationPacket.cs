@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int EntityId { get; set; }
         public sbyte HeadYaw { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : EntityHeadRotationPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : EntityHeadRotationPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

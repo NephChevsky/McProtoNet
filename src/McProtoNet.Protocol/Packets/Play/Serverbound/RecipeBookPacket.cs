@@ -12,8 +12,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         public bool BookOpen { get; set; }
         public bool FilterActive { get; set; }
 
-        [PacketSubInfo(751, 769)]
-        public sealed partial class V751_769 : RecipeBookPacket
+        [PacketSubInfo(751, 774)]
+        public sealed partial class V751_774 : RecipeBookPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -31,8 +31,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V751_769.IsSupportedVersionStatic(protocolVersion))
-                V751_769.SerializeInternal(ref writer, protocolVersion, BookId, BookOpen, FilterActive);
+            if (V751_774.IsSupportedVersionStatic(protocolVersion))
+                V751_774.SerializeInternal(ref writer, protocolVersion, BookId, BookOpen, FilterActive);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.RecipeBook), protocolVersion);
         }

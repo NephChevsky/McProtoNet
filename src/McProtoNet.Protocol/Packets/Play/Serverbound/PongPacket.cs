@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
     {
         public int Id { get; set; }
 
-        [PacketSubInfo(755, 769)]
-        public sealed partial class V755_769 : PongPacket
+        [PacketSubInfo(755, 774)]
+        public sealed partial class V755_774 : PongPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -26,8 +26,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V755_769.IsSupportedVersionStatic(protocolVersion))
-                V755_769.SerializeInternal(ref writer, protocolVersion, Id);
+            if (V755_774.IsSupportedVersionStatic(protocolVersion))
+                V755_774.SerializeInternal(ref writer, protocolVersion, Id);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.Pong), protocolVersion);
         }

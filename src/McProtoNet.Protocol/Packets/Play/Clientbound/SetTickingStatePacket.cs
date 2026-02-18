@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public float TickRate { get; set; }
         public bool IsFrozen { get; set; }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : SetTickingStatePacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : SetTickingStatePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

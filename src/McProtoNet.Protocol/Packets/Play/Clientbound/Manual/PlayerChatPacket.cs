@@ -149,8 +149,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(767, 769)]
-        public sealed partial class V767_769 : PlayerChatPacket
+        [PacketSubInfo(767, 774)]
+        public sealed partial class V767_774 : PlayerChatPacket
         {
             public Guid SenderUuid { get; set; }
             public int Index { get; set; }
@@ -197,7 +197,7 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
 
             public static ChatTypes Read(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {
-                if (protocolVersion is >= 767 and <= 769)
+                if (protocolVersion is >= 767 and <= 774)
                 {
                     return new ChatTypes
                     {
@@ -220,7 +220,7 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
 
             public static ChatType Read(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {
-                if (protocolVersion is >= 767 and <= 769)
+                if (protocolVersion is >= 767 and <= 774)
                 {
                     return new ChatType
                     {

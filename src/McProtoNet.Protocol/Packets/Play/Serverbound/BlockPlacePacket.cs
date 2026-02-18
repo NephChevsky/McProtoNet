@@ -86,8 +86,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public int Sequence { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : BlockPlacePacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : BlockPlacePacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -126,8 +126,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             else if (V759_767.IsSupportedVersionStatic(protocolVersion))
                 V759_767.SerializeInternal(ref writer, protocolVersion, Hand, Location, Direction, CursorX, CursorY,
                     CursorZ, false, 0);
-            else if (V768_769.IsSupportedVersionStatic(protocolVersion))
-                V768_769.SerializeInternal(ref writer, protocolVersion, Hand, Location, Direction, CursorX, CursorY,
+            else if (V768_774.IsSupportedVersionStatic(protocolVersion))
+                V768_774.SerializeInternal(ref writer, protocolVersion, Hand, Location, Direction, CursorX, CursorY,
                     CursorZ, false, false, 0);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.BlockPlace), protocolVersion);

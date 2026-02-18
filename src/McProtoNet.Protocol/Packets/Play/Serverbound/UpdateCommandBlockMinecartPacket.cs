@@ -12,8 +12,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         public string Command { get; set; }
         public bool TrackOutput { get; set; }
 
-        [PacketSubInfo(393, 769)]
-        public sealed partial class V393_769 : UpdateCommandBlockMinecartPacket
+        [PacketSubInfo(393, 774)]
+        public sealed partial class V393_774 : UpdateCommandBlockMinecartPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -31,8 +31,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V393_769.IsSupportedVersionStatic(protocolVersion))
-                V393_769.SerializeInternal(ref writer, protocolVersion, EntityId, Command, TrackOutput);
+            if (V393_774.IsSupportedVersionStatic(protocolVersion))
+                V393_774.SerializeInternal(ref writer, protocolVersion, EntityId, Command, TrackOutput);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.UpdateCommandBlockMinecart),
                     protocolVersion);

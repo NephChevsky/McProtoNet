@@ -8,8 +8,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     [PacketInfo("EnterCombatEvent", PacketState.Play, PacketDirection.Clientbound)]
     public abstract partial class EnterCombatEventPacket : IServerPacket
     {
-        [PacketSubInfo(755, 769)]
-        public sealed partial class V755_769 : EnterCombatEventPacket
+        [PacketSubInfo(755, 774)]
+        public sealed partial class V755_774 : EnterCombatEventPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

@@ -57,8 +57,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public Slot CarriedItem { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : WindowItemsPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : WindowItemsPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

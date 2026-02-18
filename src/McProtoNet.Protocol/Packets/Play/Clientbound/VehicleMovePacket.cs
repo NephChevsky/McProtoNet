@@ -14,8 +14,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public float Yaw { get; set; }
         public float Pitch { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : VehicleMovePacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : VehicleMovePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

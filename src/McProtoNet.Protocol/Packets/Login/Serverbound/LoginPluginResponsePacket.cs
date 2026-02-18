@@ -8,8 +8,8 @@ public partial class LoginPluginResponsePacket : IClientPacket
     public int MessageId { get; set; }
     public byte[]? Data { get; set; }
 
-    [PacketSubInfo(393, 769)]
-    public sealed partial class V393_769 : LoginPluginResponsePacket
+    [PacketSubInfo(393, 774)]
+    public sealed partial class V393_774 : LoginPluginResponsePacket
     {
         public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
@@ -31,9 +31,9 @@ public partial class LoginPluginResponsePacket : IClientPacket
 
     public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
     {
-        if (V393_769.IsSupportedVersionStatic(protocolVersion))
+        if (V393_774.IsSupportedVersionStatic(protocolVersion))
         {
-            V393_769.SerializeInternal(ref writer, protocolVersion, MessageId, Data);
+            V393_774.SerializeInternal(ref writer, protocolVersion, MessageId, Data);
         }
         else
         {

@@ -19,8 +19,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(755, 769)]
-        public sealed partial class V755_769 : SpawnPositionPacket
+        [PacketSubInfo(755, 774)]
+        public sealed partial class V755_774 : SpawnPositionPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

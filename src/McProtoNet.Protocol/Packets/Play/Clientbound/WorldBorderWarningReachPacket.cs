@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public int WarningBlocks { get; set; }
 
-        [PacketSubInfo(755, 769)]
-        public sealed partial class V755_769 : WorldBorderWarningReachPacket
+        [PacketSubInfo(755, 774)]
+        public sealed partial class V755_774 : WorldBorderWarningReachPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

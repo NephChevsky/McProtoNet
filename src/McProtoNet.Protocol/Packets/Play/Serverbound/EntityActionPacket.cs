@@ -12,8 +12,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         public int ActionId { get; set; }
         public int JumpBoost { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : EntityActionPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : EntityActionPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -31,8 +31,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V340_769.IsSupportedVersionStatic(protocolVersion))
-                V340_769.SerializeInternal(ref writer, protocolVersion, EntityId, ActionId, JumpBoost);
+            if (V340_774.IsSupportedVersionStatic(protocolVersion))
+                V340_774.SerializeInternal(ref writer, protocolVersion, EntityId, ActionId, JumpBoost);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.EntityAction), protocolVersion);
         }

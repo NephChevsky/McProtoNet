@@ -36,8 +36,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public string Message { get; set; }
         }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : DeathCombatEventPacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : DeathCombatEventPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

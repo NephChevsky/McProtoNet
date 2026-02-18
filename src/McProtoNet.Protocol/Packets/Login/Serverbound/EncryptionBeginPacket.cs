@@ -62,8 +62,8 @@ public partial class EncryptionBeginPacket : IClientPacket
         }
     }
 
-    [PacketSubInfo(761, 769)]
-    public sealed partial class V761_769 : EncryptionBeginPacket
+    [PacketSubInfo(761, 774)]
+    public sealed partial class V761_774 : EncryptionBeginPacket
     {
 
         internal static void SerializeInternal(ref MinecraftPrimitiveWriter writer, int protocolVersion,
@@ -92,9 +92,9 @@ public partial class EncryptionBeginPacket : IClientPacket
         {
             V759_760.SerializeInternal(ref writer, protocolVersion, SharedSecret, VerifyToken is not null, VerifyToken!, 0, []);
         }
-        else if (V761_769.IsSupportedVersionStatic(protocolVersion))
+        else if (V761_774.IsSupportedVersionStatic(protocolVersion))
         {
-            V761_769.SerializeInternal(ref writer, protocolVersion, SharedSecret, VerifyToken!);
+            V761_774.SerializeInternal(ref writer, protocolVersion, SharedSecret, VerifyToken!);
         }
         else
         {

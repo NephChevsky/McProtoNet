@@ -17,12 +17,12 @@ public sealed class SetProtocolPacket : IClientPacket
 
     public static bool IsSupportedVersionStatic(int protocolVersion)
     {
-        return protocolVersion is >= 340 and <= 769;
+        return protocolVersion is >= 340 and <= 774;
     }
 
     public bool IsSupportedVersion(int protocolVersion)
     {
-        return protocolVersion is >= 340 and <= 769;
+        return protocolVersion is >= 340 and <= 774;
     }
 
     public void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)

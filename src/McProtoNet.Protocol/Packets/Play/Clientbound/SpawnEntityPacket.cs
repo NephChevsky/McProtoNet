@@ -64,8 +64,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public int Type { get; set; }
         }
 
-        [PacketSubInfo(759, 769)]
-        public sealed partial class V759_769 : SpawnEntityPacket
+        [PacketSubInfo(759, 774)]
+        public sealed partial class V759_774 : SpawnEntityPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public int Distance { get; set; }
 
-        [PacketSubInfo(757, 769)]
-        public sealed partial class V757_769 : SimulationDistancePacket
+        [PacketSubInfo(757, 774)]
+        public sealed partial class V757_774 : SimulationDistancePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

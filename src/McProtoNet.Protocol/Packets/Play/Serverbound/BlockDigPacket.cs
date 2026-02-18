@@ -29,8 +29,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             }
         }
 
-        [PacketSubInfo(759, 769)]
-        public sealed partial class V759_769 : BlockDigPacket
+        [PacketSubInfo(759, 774)]
+        public sealed partial class V759_774 : BlockDigPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -53,8 +53,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_758.IsSupportedVersionStatic(protocolVersion))
                 V340_758.SerializeInternal(ref writer, protocolVersion, Status, Location, Face);
-            else if (V759_769.IsSupportedVersionStatic(protocolVersion))
-                V759_769.SerializeInternal(ref writer, protocolVersion, Status, Location, Face, 0);
+            else if (V759_774.IsSupportedVersionStatic(protocolVersion))
+                V759_774.SerializeInternal(ref writer, protocolVersion, Status, Location, Face, 0);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.BlockDig), protocolVersion);
         }

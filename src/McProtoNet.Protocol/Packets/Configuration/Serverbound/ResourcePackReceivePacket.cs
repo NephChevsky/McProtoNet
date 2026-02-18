@@ -24,8 +24,8 @@ public partial class ResourcePackReceivePacket : IClientPacket
     }
 
 
-    [PacketSubInfo(765, 769)]
-    public sealed partial class V765_769 : ResourcePackReceivePacket
+    [PacketSubInfo(765, 774)]
+    public sealed partial class V765_774 : ResourcePackReceivePacket
     {
         public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
@@ -45,8 +45,8 @@ public partial class ResourcePackReceivePacket : IClientPacket
     {
         if (V764.IsSupportedVersionStatic(protocolVersion))
             V764.SerializeInternal(ref writer, protocolVersion, Result);
-        else if (V765_769.IsSupportedVersionStatic(protocolVersion))
-            V765_769.SerializeInternal(ref writer, protocolVersion, Uuid, Result);
+        else if (V765_774.IsSupportedVersionStatic(protocolVersion))
+            V765_774.SerializeInternal(ref writer, protocolVersion, Uuid, Result);
         else
             throw new ProtocolNotSupportException(nameof(ClientConfigurationPacket.ResourcePackReceive),
                 protocolVersion);

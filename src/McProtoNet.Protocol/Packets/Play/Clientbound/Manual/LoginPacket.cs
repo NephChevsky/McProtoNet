@@ -390,8 +390,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(766, 769)]
-        public sealed partial class V766_769 : LoginPacket
+        [PacketSubInfo(766, 774)]
+        public sealed partial class V766_774 : LoginPacket
         {
             public bool IsHardcore { get; set; }
             public string[] WorldNames { get; set; }

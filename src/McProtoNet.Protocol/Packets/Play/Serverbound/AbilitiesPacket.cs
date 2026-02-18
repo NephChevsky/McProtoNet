@@ -30,8 +30,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public float WalkingSpeed { get; set; }
         }
 
-        [PacketSubInfo(734, 769)]
-        public sealed partial class V734_769 : AbilitiesPacket
+        [PacketSubInfo(734, 774)]
+        public sealed partial class V734_774 : AbilitiesPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -49,8 +49,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_710.IsSupportedVersionStatic(protocolVersion))
                 V340_710.SerializeInternal(ref writer, protocolVersion, Flags, 0, 0);
-            else if (V734_769.IsSupportedVersionStatic(protocolVersion))
-                V734_769.SerializeInternal(ref writer, protocolVersion, Flags);
+            else if (V734_774.IsSupportedVersionStatic(protocolVersion))
+                V734_774.SerializeInternal(ref writer, protocolVersion, Flags);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.Abilities), protocolVersion);
         }

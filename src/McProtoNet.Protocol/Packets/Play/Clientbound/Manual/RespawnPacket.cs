@@ -247,8 +247,8 @@ public abstract partial class RespawnPacket : IServerPacket
         }
     }
 
-    [PacketSubInfo(767, 769)]
-    public sealed partial class V767_769 : RespawnPacket
+    [PacketSubInfo(767, 774)]
+    public sealed partial class V767_774 : RespawnPacket
     {
         public SpawnInfo WorldState { get; set; }
         public byte CopyMetadata { get; set; }

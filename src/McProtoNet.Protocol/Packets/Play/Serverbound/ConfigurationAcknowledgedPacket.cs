@@ -8,8 +8,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
     [PacketInfo("ConfigurationAcknowledged", PacketState.Play, PacketDirection.Serverbound)]
     public partial class ConfigurationAcknowledgedPacket : IClientPacket
     {
-        [PacketSubInfo(764, 769)]
-        public sealed partial class V764_769 : ConfigurationAcknowledgedPacket
+        [PacketSubInfo(764, 774)]
+        public sealed partial class V764_774 : ConfigurationAcknowledgedPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -23,8 +23,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V764_769.IsSupportedVersionStatic(protocolVersion))
-                V764_769.SerializeInternal(ref writer, protocolVersion);
+            if (V764_774.IsSupportedVersionStatic(protocolVersion))
+                V764_774.SerializeInternal(ref writer, protocolVersion);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.ConfigurationAcknowledged),
                     protocolVersion);

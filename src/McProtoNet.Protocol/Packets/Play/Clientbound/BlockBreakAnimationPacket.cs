@@ -12,8 +12,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public Position Location { get; set; }
         public sbyte DestroyStage { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : BlockBreakAnimationPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : BlockBreakAnimationPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

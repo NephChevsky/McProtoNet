@@ -24,8 +24,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public byte WindowId { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : CraftProgressBarPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : CraftProgressBarPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

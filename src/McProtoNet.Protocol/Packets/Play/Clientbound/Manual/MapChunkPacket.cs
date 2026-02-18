@@ -203,8 +203,8 @@ public abstract partial class MapChunkPacket : IServerPacket
     }
     //public class V765 Ignore 
 
-    [PacketSubInfo(763, 769)]
-    public sealed partial class V763_769 : MapChunkPacket
+    [PacketSubInfo(763, 774)]
+    public sealed partial class V763_774 : MapChunkPacket
     {
         public NbtTag Heightmaps { get; set; }
         public ChunkBlockEntity[] BlockEntities { get; set; }

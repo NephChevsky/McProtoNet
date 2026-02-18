@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public int ViewDistance { get; set; }
 
-        [PacketSubInfo(477, 769)]
-        public sealed partial class V477_769 : UpdateViewDistancePacket
+        [PacketSubInfo(477, 774)]
+        public sealed partial class V477_774 : UpdateViewDistancePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

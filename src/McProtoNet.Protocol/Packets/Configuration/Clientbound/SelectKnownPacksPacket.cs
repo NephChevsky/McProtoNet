@@ -5,8 +5,8 @@ namespace McProtoNet.Protocol.Packets.Configuration.Clientbound;
 [PacketInfo("SelectKnownPacks", PacketState.Configuration, PacketDirection.Clientbound)]
 public abstract partial class SelectKnownPacksPacket : IServerPacket
 {
-    [PacketSubInfo(766, 769)]
-    public sealed partial class V766_769 : SelectKnownPacksPacket
+    [PacketSubInfo(766, 774)]
+    public sealed partial class V766_774 : SelectKnownPacksPacket
     {
         public Packs[] Packs { get; private set; }
 

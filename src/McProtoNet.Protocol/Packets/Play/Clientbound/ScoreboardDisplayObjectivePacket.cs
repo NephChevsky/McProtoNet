@@ -22,8 +22,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public sbyte Position { get; set; }
         }
 
-        [PacketSubInfo(764, 769)]
-        public sealed partial class V764_769 : ScoreboardDisplayObjectivePacket
+        [PacketSubInfo(764, 774)]
+        public sealed partial class V764_774 : ScoreboardDisplayObjectivePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

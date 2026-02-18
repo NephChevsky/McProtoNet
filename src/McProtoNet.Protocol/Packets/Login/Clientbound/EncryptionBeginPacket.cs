@@ -22,8 +22,8 @@ public abstract partial class EncryptionBeginPacket : IServerPacket
         }
     }
 
-    [PacketSubInfo(766, 769)]
-    public sealed partial class V766_769 : EncryptionBeginPacket
+    [PacketSubInfo(766, 774)]
+    public sealed partial class V766_774 : EncryptionBeginPacket
     {
         public bool ShouldAuthenticate { get; set; }
 

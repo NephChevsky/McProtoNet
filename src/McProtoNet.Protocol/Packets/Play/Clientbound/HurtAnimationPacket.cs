@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int EntityId { get; set; }
         public float Yaw { get; set; }
 
-        [PacketSubInfo(762, 769)]
-        public sealed partial class V762_769 : HurtAnimationPacket
+        [PacketSubInfo(762, 774)]
+        public sealed partial class V762_774 : HurtAnimationPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

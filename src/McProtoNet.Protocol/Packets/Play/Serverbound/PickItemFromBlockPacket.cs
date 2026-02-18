@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         public Position Position { get; set; }
         public bool IncludeData { get; set; }
 
-        [PacketSubInfo(769, 769)]
-        public sealed partial class V769 : PickItemFromBlockPacket
+        [PacketSubInfo(769, 774)]
+        public sealed partial class V769_774 : PickItemFromBlockPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -29,8 +29,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V769.IsSupportedVersionStatic(protocolVersion))
-                V769.SerializeInternal(ref writer, protocolVersion, Position, IncludeData);
+            if (V769_774.IsSupportedVersionStatic(protocolVersion))
+                V769_774.SerializeInternal(ref writer, protocolVersion, Position, IncludeData);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.PickItemFromBlock), protocolVersion);
         }

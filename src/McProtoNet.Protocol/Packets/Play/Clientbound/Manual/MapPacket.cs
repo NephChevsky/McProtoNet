@@ -164,8 +164,8 @@ public abstract partial class MapPacket : IServerPacket
         }
     }
 
-    [PacketSubInfo(765, 769)]
-    public sealed partial class V765_769 : MapPacket
+    [PacketSubInfo(765, 774)]
+    public sealed partial class V765_774 : MapPacket
     {
         public bool Locked { get; set; }
         public MapIcon[]? Icons { get; set; }

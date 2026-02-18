@@ -22,8 +22,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public sbyte EffectId { get; set; }
         }
 
-        [PacketSubInfo(758, 769)]
-        public sealed partial class V758_769 : RemoveEntityEffectPacket
+        [PacketSubInfo(758, 774)]
+        public sealed partial class V758_774 : RemoveEntityEffectPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

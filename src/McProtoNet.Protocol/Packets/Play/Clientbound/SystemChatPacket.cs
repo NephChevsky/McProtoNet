@@ -34,8 +34,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public bool IsActionBar { get; set; }
         }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : SystemChatPacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : SystemChatPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

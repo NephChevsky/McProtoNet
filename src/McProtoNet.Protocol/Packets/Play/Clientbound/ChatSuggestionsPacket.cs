@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int Action { get; set; }
         public string[] Entries { get; set; }
 
-        [PacketSubInfo(760, 769)]
-        public sealed partial class V760_769 : ChatSuggestionsPacket
+        [PacketSubInfo(760, 774)]
+        public sealed partial class V760_774 : ChatSuggestionsPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

@@ -22,8 +22,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public int EntityId { get; set; }
         }
 
-        [PacketSubInfo(763, 769)]
-        public sealed partial class V763_769 : EndCombatEventPacket
+        [PacketSubInfo(763, 774)]
+        public sealed partial class V763_774 : EndCombatEventPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

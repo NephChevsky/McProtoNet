@@ -11,8 +11,8 @@ public abstract partial class LoginPluginRequestPacket : IServerPacket
     public byte[] Data { get; set; }
 
 
-    [PacketSubInfo(393, 769)]
-    public sealed partial class V393_769 : LoginPluginRequestPacket
+    [PacketSubInfo(393, 774)]
+    public sealed partial class V393_774 : LoginPluginRequestPacket
     {
         public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
         {

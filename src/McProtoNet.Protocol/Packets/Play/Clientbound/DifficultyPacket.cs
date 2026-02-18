@@ -19,8 +19,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(477, 769)]
-        public sealed partial class V477_769 : DifficultyPacket
+        [PacketSubInfo(477, 774)]
+        public sealed partial class V477_774 : DifficultyPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

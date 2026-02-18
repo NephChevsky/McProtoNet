@@ -20,14 +20,14 @@ public static class Extensions
         var locEncoded = reader.ReadSignedLong();
         int x, y, z;
 
-        if (protocolVersion is < 340 or > 769)
+        if (protocolVersion is < 340 or > 774)
         {
             throw new InvalidOperationException($"Protocol {protocolVersion} not supported.");
         }
 
         if (protocolVersion >= 477)
         {
-            // Protocol 477-769: x(26) z(26) y(12)
+            // Protocol 477-774: x(26) z(26) y(12)
             x = (int)(locEncoded >> 38);
             z = (int)((locEncoded >> 12) & 0x3FFFFFF);
             y = (int)(locEncoded & 0xFFF);
@@ -107,7 +107,7 @@ public static class Extensions
 
 
     {
-        if (protocolVersion is < 757 or > 769)
+        if (protocolVersion is < 757 or > 774)
             throw new InvalidOperationException($"Protocol {protocolVersion} not supported.");
 
         byte packed = reader.ReadUnsignedByte();
@@ -122,7 +122,7 @@ public static class Extensions
 
     public static Vector2 ReadVector2(this ref MinecraftPrimitiveReader reader, int protocolVersion)
     {
-        if (protocolVersion is >= 767 and <= 769)
+        if (protocolVersion is >= 767 and <= 774)
         {
             float x = reader.ReadFloat();
             float y = reader.ReadFloat();
@@ -134,7 +134,7 @@ public static class Extensions
 
     public static Vector3F64 ReadVector3F64(this ref MinecraftPrimitiveReader reader, int protocolVersion)
     {
-        if (protocolVersion is >= 762 and <= 769)
+        if (protocolVersion is >= 762 and <= 774)
         {
             double x = reader.ReadDouble();
             double y = reader.ReadDouble();
@@ -173,7 +173,7 @@ public static class Extensions
     public static void WriteVector2(this scoped ref MinecraftPrimitiveWriter writer, Vector2 rotation,
         int protocolVersion)
     {
-        if (protocolVersion is >= 767 and <= 769)
+        if (protocolVersion is >= 767 and <= 774)
         {
             writer.WriteFloat(rotation.X);
             writer.WriteFloat(rotation.Y);
@@ -185,7 +185,7 @@ public static class Extensions
     public static void WriteVector3F64(this scoped ref MinecraftPrimitiveWriter writer, Vector3F64 rotation,
         int protocolVersion)
     {
-        if (protocolVersion is >= 762 and <= 769)
+        if (protocolVersion is >= 762 and <= 774)
         {
             writer.WriteDouble(rotation.X);
             writer.WriteDouble(rotation.Y);

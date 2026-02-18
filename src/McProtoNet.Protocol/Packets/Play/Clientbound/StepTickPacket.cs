@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public int TickSteps { get; set; }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : StepTickPacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : StepTickPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

@@ -25,8 +25,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public bool Successful { get; set; }
         }
 
-        [PacketSubInfo(759, 769)]
-        public sealed partial class V759_769 : AcknowledgePlayerDiggingPacket
+        [PacketSubInfo(759, 774)]
+        public sealed partial class V759_774 : AcknowledgePlayerDiggingPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

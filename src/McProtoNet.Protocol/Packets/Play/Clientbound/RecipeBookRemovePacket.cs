@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public int[] RecipeIds { get; set; }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : RecipeBookRemovePacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : RecipeBookRemovePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

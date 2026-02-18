@@ -21,8 +21,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(764, 769)]
-        internal sealed partial class V764_769 : UnloadChunkPacket
+        [PacketSubInfo(764, 774)]
+        internal sealed partial class V764_774 : UnloadChunkPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

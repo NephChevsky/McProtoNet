@@ -27,8 +27,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public int SecondaryEffect { get; set; }
         }
 
-        [PacketSubInfo(759, 769)]
-        public sealed partial class V759_769 : SetBeaconEffectPacket
+        [PacketSubInfo(759, 774)]
+        public sealed partial class V759_774 : SetBeaconEffectPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -54,8 +54,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V393_758.IsSupportedVersionStatic(protocolVersion))
                 V393_758.SerializeInternal(ref writer, protocolVersion, 0, 0);
-            else if (V759_769.IsSupportedVersionStatic(protocolVersion))
-                V759_769.SerializeInternal(ref writer, protocolVersion, null, null);
+            else if (V759_774.IsSupportedVersionStatic(protocolVersion))
+                V759_774.SerializeInternal(ref writer, protocolVersion, null, null);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.SetBeaconEffect), protocolVersion);
         }

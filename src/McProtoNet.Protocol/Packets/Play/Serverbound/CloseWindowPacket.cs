@@ -25,8 +25,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public byte WindowId { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : CloseWindowPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : CloseWindowPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -46,8 +46,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_767.IsSupportedVersionStatic(protocolVersion))
                 V340_767.SerializeInternal(ref writer, protocolVersion, 0);
-            else if (V768_769.IsSupportedVersionStatic(protocolVersion))
-                V768_769.SerializeInternal(ref writer, protocolVersion, default);
+            else if (V768_774.IsSupportedVersionStatic(protocolVersion))
+                V768_774.SerializeInternal(ref writer, protocolVersion, default);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.CloseWindow), protocolVersion);
         }

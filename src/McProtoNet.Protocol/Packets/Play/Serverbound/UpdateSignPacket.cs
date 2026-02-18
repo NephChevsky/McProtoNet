@@ -33,8 +33,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             }
         }
 
-        [PacketSubInfo(763, 769)]
-        public sealed partial class V763_769 : UpdateSignPacket
+        [PacketSubInfo(763, 774)]
+        public sealed partial class V763_774 : UpdateSignPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -59,8 +59,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_762.IsSupportedVersionStatic(protocolVersion))
                 V340_762.SerializeInternal(ref writer, protocolVersion, Location, Text1, Text2, Text3, Text4);
-            else if (V763_769.IsSupportedVersionStatic(protocolVersion))
-                V763_769.SerializeInternal(ref writer, protocolVersion, Location, false, Text1, Text2, Text3, Text4);
+            else if (V763_774.IsSupportedVersionStatic(protocolVersion))
+                V763_774.SerializeInternal(ref writer, protocolVersion, Location, false, Text1, Text2, Text3, Text4);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.UpdateSign), protocolVersion);
         }

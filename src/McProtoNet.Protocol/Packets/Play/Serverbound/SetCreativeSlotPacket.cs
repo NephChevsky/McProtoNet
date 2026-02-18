@@ -27,8 +27,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             }
         }
 
-        [PacketSubInfo(766, 769)]
-        internal sealed partial class V766_769 : SetCreativeSlotPacket
+        [PacketSubInfo(766, 774)]
+        internal sealed partial class V766_774 : SetCreativeSlotPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -47,8 +47,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_765.IsSupportedVersionStatic(protocolVersion))
                 V340_765.SerializeInternal(ref writer, protocolVersion, Slot, Item);
-            else if (V766_769.IsSupportedVersionStatic(protocolVersion))
-                V766_769.SerializeInternal(ref writer, protocolVersion, Slot, Item);
+            else if (V766_774.IsSupportedVersionStatic(protocolVersion))
+                V766_774.SerializeInternal(ref writer, protocolVersion, Slot, Item);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.SetCreativeSlot), protocolVersion);
         }

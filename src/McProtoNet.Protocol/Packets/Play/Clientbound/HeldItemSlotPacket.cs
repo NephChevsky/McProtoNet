@@ -19,8 +19,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public sbyte Slot { get; set; }
         }
 
-        [PacketSubInfo(769, 769)]
-        public sealed partial class V769 : HeldItemSlotPacket
+        [PacketSubInfo(769, 774)]
+        public sealed partial class V769_774 : HeldItemSlotPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

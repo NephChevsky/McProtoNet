@@ -30,8 +30,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public bool OnGround { get; set; }
         }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : LookPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : LookPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -53,8 +53,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_767.IsSupportedVersionStatic(protocolVersion))
                 V340_767.SerializeInternal(ref writer, protocolVersion, Yaw, Pitch, false);
-            else if (V768_769.IsSupportedVersionStatic(protocolVersion))
-                V768_769.SerializeInternal(ref writer, protocolVersion, Yaw, Pitch, default);
+            else if (V768_774.IsSupportedVersionStatic(protocolVersion))
+                V768_774.SerializeInternal(ref writer, protocolVersion, Yaw, Pitch, default);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.Look), protocolVersion);
         }

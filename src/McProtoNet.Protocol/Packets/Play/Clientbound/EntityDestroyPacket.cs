@@ -19,8 +19,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(756, 769)]
-        public sealed partial class V756_769 : EntityDestroyPacket
+        [PacketSubInfo(756, 774)]
+        public sealed partial class V756_774 : EntityDestroyPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

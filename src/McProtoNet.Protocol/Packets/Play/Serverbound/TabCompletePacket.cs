@@ -32,8 +32,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public Position? LookedAtBlock { get; set; }
         }
 
-        [PacketSubInfo(351, 769)]
-        public sealed partial class V351_769 : TabCompletePacket
+        [PacketSubInfo(351, 774)]
+        public sealed partial class V351_774 : TabCompletePacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -54,8 +54,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340.IsSupportedVersionStatic(protocolVersion))
                 V340.SerializeInternal(ref writer, protocolVersion, Text, false, null);
-            else if (V351_769.IsSupportedVersionStatic(protocolVersion))
-                V351_769.SerializeInternal(ref writer, protocolVersion, 0, Text);
+            else if (V351_774.IsSupportedVersionStatic(protocolVersion))
+                V351_774.SerializeInternal(ref writer, protocolVersion, 0, Text);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.TabComplete), protocolVersion);
         }

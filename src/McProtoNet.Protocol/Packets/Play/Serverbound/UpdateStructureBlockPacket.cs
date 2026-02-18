@@ -59,8 +59,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public long Seed { get; set; }
         }
 
-        [PacketSubInfo(759, 769)]
-        public sealed partial class V759_769 : UpdateStructureBlockPacket
+        [PacketSubInfo(759, 774)]
+        public sealed partial class V759_774 : UpdateStructureBlockPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -99,8 +99,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             if (V393_758.IsSupportedVersionStatic(protocolVersion))
                 V393_758.SerializeInternal(ref writer, protocolVersion, Location, Action, Mode, Name, OffsetX, OffsetY,
                     OffsetZ, SizeX, SizeY, SizeZ, Mirror, Rotation, Metadata, Integrity, 0, Flags);
-            else if (V759_769.IsSupportedVersionStatic(protocolVersion))
-                V759_769.SerializeInternal(ref writer, protocolVersion, Location, Action, Mode, Name, OffsetX, OffsetY,
+            else if (V759_774.IsSupportedVersionStatic(protocolVersion))
+                V759_774.SerializeInternal(ref writer, protocolVersion, Location, Action, Mode, Name, OffsetX, OffsetY,
                     OffsetZ, SizeX, SizeY, SizeZ, Mirror, Rotation, Metadata, Integrity, 0, Flags);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.UpdateStructureBlock), protocolVersion);

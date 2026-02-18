@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public byte Reason { get; set; }
         public float GameMode { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : GameStateChangePacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : GameStateChangePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

@@ -48,8 +48,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public int Hand { get; set; }
         }
 
-        [PacketSubInfo(756, 769)]
-        public sealed partial class V756_769 : EditBookPacket
+        [PacketSubInfo(756, 774)]
+        public sealed partial class V756_774 : EditBookPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -79,8 +79,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
                 V393.SerializeInternal(ref writer, protocolVersion, default, false);
             else if (V401_755.IsSupportedVersionStatic(protocolVersion))
                 V401_755.SerializeInternal(ref writer, protocolVersion, default, false, 0);
-            else if (V756_769.IsSupportedVersionStatic(protocolVersion))
-                V756_769.SerializeInternal(ref writer, protocolVersion, 0, [], null);
+            else if (V756_774.IsSupportedVersionStatic(protocolVersion))
+                V756_774.SerializeInternal(ref writer, protocolVersion, 0, [], null);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.EditBook), protocolVersion);
         }

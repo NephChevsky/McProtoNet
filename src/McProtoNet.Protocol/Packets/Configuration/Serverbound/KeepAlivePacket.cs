@@ -7,8 +7,8 @@ public partial class KeepAlivePacket : IClientPacket
 {
     public long KeepAliveId { get; set; }
 
-    [PacketSubInfo(764, 769)]
-    public sealed partial class V764_769 : KeepAlivePacket
+    [PacketSubInfo(764, 774)]
+    public sealed partial class V764_774 : KeepAlivePacket
     {
         public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
@@ -25,8 +25,8 @@ public partial class KeepAlivePacket : IClientPacket
 
     public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
     {
-        if (V764_769.IsSupportedVersionStatic(protocolVersion))
-            V764_769.SerializeInternal(ref writer, protocolVersion, KeepAliveId);
+        if (V764_774.IsSupportedVersionStatic(protocolVersion))
+            V764_774.SerializeInternal(ref writer, protocolVersion, KeepAliveId);
         else
             throw new ProtocolNotSupportException(nameof(ClientConfigurationPacket.KeepAlive), protocolVersion);
     }

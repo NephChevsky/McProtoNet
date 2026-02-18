@@ -113,8 +113,8 @@ public partial class LoginStartPacket : IClientPacket
         }
     }
 
-    [PacketSubInfo(764, 769)]
-    public sealed partial class V764_769 : LoginStartPacket
+    [PacketSubInfo(764, 774)]
+    public sealed partial class V764_774 : LoginStartPacket
     {
         public Guid PlayerUUID { get; set; }
 
@@ -150,9 +150,9 @@ public partial class LoginStartPacket : IClientPacket
         {
             V761_763.SerializeInternal(ref writer, protocolVersion, Username, false, null);
         }
-        else if (V764_769.IsSupportedVersionStatic(protocolVersion))
+        else if (V764_774.IsSupportedVersionStatic(protocolVersion))
         {
-            V764_769.SerializeInternal(ref writer, protocolVersion, Username, Guid.Empty);
+            V764_774.SerializeInternal(ref writer, protocolVersion, Username, Guid.Empty);
         }
         else
         {

@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public long KeepAliveId { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : KeepAlivePacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : KeepAlivePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

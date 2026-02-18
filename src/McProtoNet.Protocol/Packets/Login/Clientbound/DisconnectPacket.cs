@@ -9,8 +9,8 @@ public abstract partial class DisconnectPacket : IServerPacket
 {
     public string Reason { get; set; }
 
-    [PacketSubInfo(340, 769)]
-    internal sealed partial class V340_769 : DisconnectPacket
+    [PacketSubInfo(340, 774)]
+    internal sealed partial class V340_774 : DisconnectPacket
     {
         public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
         {

@@ -8,8 +8,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     [PacketInfo("StartConfiguration", PacketState.Play, PacketDirection.Clientbound)]
     public abstract partial class StartConfigurationPacket : IServerPacket
     {
-        [PacketSubInfo(764, 769)]
-        public sealed partial class V764_769 : StartConfigurationPacket
+        [PacketSubInfo(764, 774)]
+        public sealed partial class V764_774 : StartConfigurationPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

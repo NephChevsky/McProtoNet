@@ -34,8 +34,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public long Speed { get; set; }
         }
 
-        [PacketSubInfo(759, 769)]
-        public sealed partial class V759_769 : InitializeWorldBorderPacket
+        [PacketSubInfo(759, 774)]
+        public sealed partial class V759_774 : InitializeWorldBorderPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

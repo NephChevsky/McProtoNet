@@ -12,8 +12,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         public int Levels { get; set; }
         public bool KeepJigsaws { get; set; }
 
-        [PacketSubInfo(734, 769)]
-        public sealed partial class V734_769 : GenerateStructurePacket
+        [PacketSubInfo(734, 774)]
+        public sealed partial class V734_774 : GenerateStructurePacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -31,8 +31,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V734_769.IsSupportedVersionStatic(protocolVersion))
-                V734_769.SerializeInternal(ref writer, protocolVersion, Location, Levels, KeepJigsaws);
+            if (V734_774.IsSupportedVersionStatic(protocolVersion))
+                V734_774.SerializeInternal(ref writer, protocolVersion, Location, Levels, KeepJigsaws);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.GenerateStructure), protocolVersion);
         }

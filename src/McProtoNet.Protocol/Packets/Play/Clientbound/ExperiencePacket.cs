@@ -34,8 +34,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             }
         }
 
-        [PacketSubInfo(764, 769)]
-        internal sealed partial class V764_769 : ExperiencePacket
+        [PacketSubInfo(764, 774)]
+        internal sealed partial class V764_774 : ExperiencePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

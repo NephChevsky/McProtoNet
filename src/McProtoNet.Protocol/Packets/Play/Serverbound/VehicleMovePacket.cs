@@ -33,8 +33,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             }
         }
 
-        [PacketSubInfo(769, 769)]
-        public sealed partial class V769 : VehicleMovePacket
+        [PacketSubInfo(769, 774)]
+        public sealed partial class V769_774 : VehicleMovePacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -59,8 +59,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         {
             if (V340_768.IsSupportedVersionStatic(protocolVersion))
                 V340_768.SerializeInternal(ref writer, protocolVersion, X, Y, Z, Yaw, Pitch);
-            else if (V769.IsSupportedVersionStatic(protocolVersion))
-                V769.SerializeInternal(ref writer, protocolVersion, X, Y, Z, Yaw, Pitch, false);
+            else if (V769_774.IsSupportedVersionStatic(protocolVersion))
+                V769_774.SerializeInternal(ref writer, protocolVersion, X, Y, Z, Yaw, Pitch, false);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.VehicleMove), protocolVersion);
         }

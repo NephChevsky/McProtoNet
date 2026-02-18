@@ -16,8 +16,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public sbyte Pitch { get; set; }
         public bool OnGround { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : EntityTeleportPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : EntityTeleportPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

@@ -5,8 +5,8 @@ namespace McProtoNet.Protocol.Packets.Configuration.Serverbound;
 [PacketInfo("SelectKnownPacks", PacketState.Configuration, PacketDirection.Serverbound)]
 public partial class SelectKnownPacksPacket : IClientPacket
 {
-    [PacketSubInfo(766, 769)]
-    public sealed partial class V766_769 : SelectKnownPacksPacket
+    [PacketSubInfo(766, 774)]
+    public sealed partial class V766_774 : SelectKnownPacksPacket
     {
         public Packs[] Packs { get; set; }
 
@@ -29,9 +29,9 @@ public partial class SelectKnownPacksPacket : IClientPacket
 
     public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
     {
-        if (V766_769.IsSupportedVersionStatic(protocolVersion))
+        if (V766_774.IsSupportedVersionStatic(protocolVersion))
         {
-            V766_769.SerializeInternal(ref writer, protocolVersion, []);
+            V766_774.SerializeInternal(ref writer, protocolVersion, []);
         }
         else
         {

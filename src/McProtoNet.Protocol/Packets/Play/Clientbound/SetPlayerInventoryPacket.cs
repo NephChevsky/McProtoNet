@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public int SlotId { get; set; }
         public Slot? Contents { get; set; }
 
-        [PacketSubInfo(768, 769)]
-        public sealed partial class V768_769 : SetPlayerInventoryPacket
+        [PacketSubInfo(768, 774)]
+        public sealed partial class V768_774 : SetPlayerInventoryPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

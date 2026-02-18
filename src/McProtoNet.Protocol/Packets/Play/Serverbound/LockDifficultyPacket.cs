@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
     {
         public bool Locked { get; set; }
 
-        [PacketSubInfo(477, 769)]
-        public sealed partial class V477_769 : LockDifficultyPacket
+        [PacketSubInfo(477, 774)]
+        public sealed partial class V477_774 : LockDifficultyPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -27,8 +27,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V477_769.IsSupportedVersionStatic(protocolVersion))
-                V477_769.SerializeInternal(ref writer, protocolVersion, Locked);
+            if (V477_774.IsSupportedVersionStatic(protocolVersion))
+                V477_774.SerializeInternal(ref writer, protocolVersion, Locked);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.LockDifficulty), protocolVersion);
         }

@@ -12,8 +12,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public float FlyingSpeed { get; set; }
         public float WalkingSpeed { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : AbilitiesPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : AbilitiesPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

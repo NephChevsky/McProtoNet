@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public long Id { get; set; }
 
-        [PacketSubInfo(764, 769)]
-        public sealed partial class V764_769 : PingResponsePacket
+        [PacketSubInfo(764, 774)]
+        public sealed partial class V764_774 : PingResponsePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

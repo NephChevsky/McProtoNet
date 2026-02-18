@@ -19,8 +19,8 @@ public abstract partial class RegistryDataPacket : IServerPacket
         }
     }
 
-    [PacketSubInfo(766, 769)]
-    public sealed partial class V766_769 : RegistryDataPacket
+    [PacketSubInfo(766, 774)]
+    public sealed partial class V766_774 : RegistryDataPacket
     {
         public string Id { get; set; }
         public List<RegistryEntry> Entries { get; set; }

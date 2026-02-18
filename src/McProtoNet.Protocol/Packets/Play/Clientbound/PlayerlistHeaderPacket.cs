@@ -21,8 +21,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public string Footer { get; set; }
         }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : PlayerlistHeaderPacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : PlayerlistHeaderPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

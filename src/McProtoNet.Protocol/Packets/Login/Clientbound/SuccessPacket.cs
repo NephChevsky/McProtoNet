@@ -84,8 +84,8 @@ public abstract partial class SuccessPacket : IServerPacket
         }
     }
 
-    [PacketSubInfo(768, 769)]
-    public sealed partial class V768_769 : SuccessPacket
+    [PacketSubInfo(768, 774)]
+    public sealed partial class V768_774 : SuccessPacket
     {
         public Guid Uuid { get; set; }
         public Property[] Properties { get; set; }

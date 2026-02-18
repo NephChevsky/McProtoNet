@@ -57,8 +57,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             public string JointType { get; set; }
         }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : UpdateJigsawBlockPacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : UpdateJigsawBlockPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -96,8 +96,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
             else if (V709_764.IsSupportedVersionStatic(protocolVersion))
                 V709_764.SerializeInternal(ref writer, protocolVersion, Location, string.Empty, string.Empty,
                     string.Empty, FinalState, string.Empty);
-            else if (V765_769.IsSupportedVersionStatic(protocolVersion))
-                V765_769.SerializeInternal(ref writer, protocolVersion, Location, string.Empty, string.Empty,
+            else if (V765_774.IsSupportedVersionStatic(protocolVersion))
+                V765_774.SerializeInternal(ref writer, protocolVersion, Location, string.Empty, string.Empty,
                     string.Empty, FinalState, string.Empty, 0, 0);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.UpdateJigsawBlock), protocolVersion);

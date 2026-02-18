@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
     {
         public string Name { get; set; }
 
-        [PacketSubInfo(393, 769)]
-        public sealed partial class V393_769 : NameItemPacket
+        [PacketSubInfo(393, 774)]
+        public sealed partial class V393_774 : NameItemPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -27,8 +27,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V393_769.IsSupportedVersionStatic(protocolVersion))
-                V393_769.SerializeInternal(ref writer, protocolVersion, Name);
+            if (V393_774.IsSupportedVersionStatic(protocolVersion))
+                V393_774.SerializeInternal(ref writer, protocolVersion, Name);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.NameItem), protocolVersion);
         }

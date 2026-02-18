@@ -19,8 +19,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
             public string Text { get; set; }
         }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : SetTitleSubtitlePacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : SetTitleSubtitlePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

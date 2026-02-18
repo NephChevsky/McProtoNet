@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
     {
         public int TeleportId { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : TeleportConfirmPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : TeleportConfirmPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -27,8 +27,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V340_769.IsSupportedVersionStatic(protocolVersion))
-                V340_769.SerializeInternal(ref writer, protocolVersion, TeleportId);
+            if (V340_774.IsSupportedVersionStatic(protocolVersion))
+                V340_774.SerializeInternal(ref writer, protocolVersion, TeleportId);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.TeleportConfirm), protocolVersion);
         }

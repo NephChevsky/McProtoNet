@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
         public string EntityName { get; set; }
         public string? ObjectiveName { get; set; }
 
-        [PacketSubInfo(765, 769)]
-        public sealed partial class V765_769 : ResetScorePacket
+        [PacketSubInfo(765, 774)]
+        public sealed partial class V765_774 : ResetScorePacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

@@ -10,8 +10,8 @@ namespace McProtoNet.Protocol.Packets.Play.Clientbound
     {
         public int BatchSize { get; set; }
 
-        [PacketSubInfo(764, 769)]
-        public sealed partial class V764_769 : ChunkBatchFinishedPacket
+        [PacketSubInfo(764, 774)]
+        public sealed partial class V764_774 : ChunkBatchFinishedPacket
         {
             public override void Deserialize(ref MinecraftPrimitiveReader reader, int protocolVersion)
             {

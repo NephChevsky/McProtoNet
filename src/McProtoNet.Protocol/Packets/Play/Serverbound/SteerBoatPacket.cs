@@ -11,8 +11,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
         public bool LeftPaddle { get; set; }
         public bool RightPaddle { get; set; }
 
-        [PacketSubInfo(340, 769)]
-        internal sealed partial class V340_769 : SteerBoatPacket
+        [PacketSubInfo(340, 774)]
+        internal sealed partial class V340_774 : SteerBoatPacket
         {
             public override void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
             {
@@ -29,8 +29,8 @@ namespace McProtoNet.Protocol.Packets.Play.Serverbound
 
         public virtual void Serialize(ref MinecraftPrimitiveWriter writer, int protocolVersion)
         {
-            if (V340_769.IsSupportedVersionStatic(protocolVersion))
-                V340_769.SerializeInternal(ref writer, protocolVersion, LeftPaddle, RightPaddle);
+            if (V340_774.IsSupportedVersionStatic(protocolVersion))
+                V340_774.SerializeInternal(ref writer, protocolVersion, LeftPaddle, RightPaddle);
             else
                 throw new ProtocolNotSupportException(nameof(ClientPlayPacket.SteerBoat), protocolVersion);
         }
